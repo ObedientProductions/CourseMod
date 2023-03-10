@@ -1,5 +1,6 @@
 package net.coderdan.mccourse;
 
+import net.coderdan.mccourse.block.ModBlocks;
 import net.coderdan.mccourse.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -33,6 +34,7 @@ public class MCCourseMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::setup);
 

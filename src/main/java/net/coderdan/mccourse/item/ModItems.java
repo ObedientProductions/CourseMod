@@ -14,10 +14,13 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> COBALT_INGOT = createItem("cobalt_ingot",
-            new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
+            new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> COBALT_NUGGET = createItem("cobalt_nugget",
-            new Item(new Item.Properties().tab(CreativeModeTab.TAB_MATERIALS)));
+            new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+
+    public static final RegistryObject<Item> RAW_COBALT = createItem("raw_cobalt",
+            new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
 
 
