@@ -1,6 +1,7 @@
 package net.coderdan.mccourse.item;
 
 import net.coderdan.mccourse.MCCourseMod;
+import net.coderdan.mccourse.item.custom.DowsingRodItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -21,6 +22,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> RAW_COBALT = createItem("raw_cobalt",
             new Item(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+
+    public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",
+            ()-> new DowsingRodItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)
+                    .durability(16)));
 
 
 

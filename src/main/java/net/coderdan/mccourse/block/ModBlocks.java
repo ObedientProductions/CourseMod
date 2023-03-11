@@ -1,6 +1,7 @@
 package net.coderdan.mccourse.block;
 
 import net.coderdan.mccourse.MCCourseMod;
+import net.coderdan.mccourse.block.custom.SpeedyBlock;
 import net.coderdan.mccourse.item.ModCreativeModeTab;
 import net.coderdan.mccourse.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -36,6 +37,11 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
     public static final RegistryObject<Block> RAW_COBALT_BLOCK = registerBlock("raw_cobalt_ore", ()-> new Block(
+            BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block", ()-> new SpeedyBlock(
             BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4f)
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
