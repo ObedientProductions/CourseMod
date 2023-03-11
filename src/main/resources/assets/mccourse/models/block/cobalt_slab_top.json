@@ -1,5 +1,5 @@
 {
-  "parent": "mccourse:block/slab_top",
+  "parent": "minecraft:block/slab_top",
   "textures": {
     "bottom": "mccourse:block/cobalt_block",
     "top": "mccourse:block/cobalt_block",

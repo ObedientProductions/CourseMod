@@ -8,9 +8,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -42,7 +40,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
     public static final RegistryObject<Block> RAW_COBALT_BLOCK = registerBlock("raw_cobalt_ore", ()-> new Block(
-            BlockBehaviour.Properties.of(Material.STONE)
+            BlockBehaviour.Properties.of(Material.METAL)
                     .strength(4f)
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
@@ -53,15 +51,65 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> COBALT_STAIRS = registerBlock("cobalt_stairs",
             ()-> new StairBlock(()-> ModBlocks.COBALT_BLOCK.get().defaultBlockState(),
-            BlockBehaviour.Properties.of(Material.STONE)
+            BlockBehaviour.Properties.of(Material.METAL)
                     .strength(4f)
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
 
     public static final RegistryObject<Block> COBALT_SLAB = registerBlock("cobalt_slab", ()-> new SlabBlock(
-            BlockBehaviour.Properties.of(Material.STONE)
+            BlockBehaviour.Properties.of(Material.METAL)
                     .strength(4f)
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> COBALT_BUTTON = registerBlock("cobalt_button", ()-> new StoneButtonBlock(
+            BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()
+                    .noCollission()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> COBALT_PRESSURE_PLATE = registerBlock("cobalt_pressure_plate", ()-> new PressurePlateBlock(
+            PressurePlateBlock.Sensitivity.EVERYTHING,BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+
+
+
+    public static final RegistryObject<Block> COBALT_FENCE = registerBlock("cobalt_fence", ()-> new FenceBlock(
+            BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> COBALT_FENCE_GATE = registerBlock("cobalt_fence_gate", ()-> new FenceGateBlock(
+            BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> COBALT_WALL = registerBlock("cobalt_wall", ()-> new WallBlock(
+            BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> CHERRY_BLOSSOM_DOOR= registerBlock("cherry_blossom_door", ()-> new DoorBlock(
+            BlockBehaviour.Properties.of(Material.WOOD)
+                    .sound(SoundType.WOOD)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops().noCollission()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> CHERRY_BLOSSOM_TRAPDOOR= registerBlock("cherry_blossom_trapdoor", ()-> new TrapDoorBlock(
+            BlockBehaviour.Properties.of(Material.WOOD)
+                    .sound(SoundType.WOOD)
+                    .strength(4f)
+                    .requiresCorrectToolForDrops().noCollission()), ModCreativeModeTab.COURSE_TAB);
+
+
+
+
+
+
+
+
+
+
 
 
 
