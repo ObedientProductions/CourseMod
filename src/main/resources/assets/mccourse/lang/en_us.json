@@ -11,8 +11,13 @@
   "block.mccourse.deepslate_cobalt_ore": "Deepslate Cobalt Ore",
   "block.mccourse.raw_cobalt_ore": "Block Of Raw Cobalt",
   "block.mccourse.speedy_block": "Speedy Block",
+  "block.mccourse.cobalt_stairs": "Cobalt Stairs",
+  "block.mccourse.cobalt_slab": "Cobalt Slab",
 
   "itemGroup.coursemodtab": "Course Tab",
 
-  "item.mccourse.dowsing_rod.no_valuables" : "No Valuables Found."
+  "item.mccourse.dowsing_rod.no_valuables" : "No Valuables Found.",
+  "tooltip.mccourse.dowsing_rod.tooltip.shift" : "§eRight Click A Block To Find Valuables!",
+  "tooltip.mccourse.dowsing_rod.tooltip" : "Hold§e§l SHIFT §rFor More Info",
+  "tooltip.block.speedy_block": "§eIt Gets §lREALLY §r§espeedy!"
 }
