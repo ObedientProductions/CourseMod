@@ -1,6 +1,8 @@
 package net.coderdan.mccourse.block;
 
 import net.coderdan.mccourse.MCCourseMod;
+import net.coderdan.mccourse.block.custom.ArtifactBlock;
+import net.coderdan.mccourse.block.custom.CobaltLampBlock;
 import net.coderdan.mccourse.block.custom.SpeedyBlock;
 import net.coderdan.mccourse.item.ModCreativeModeTab;
 import net.coderdan.mccourse.item.ModItems;
@@ -100,6 +102,22 @@ public class ModBlocks {
                     .sound(SoundType.WOOD)
                     .strength(4f)
                     .requiresCorrectToolForDrops().noCollission()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> COBALT_LAMP= registerBlock("cobalt_lamp", ()-> new CobaltLampBlock(
+            BlockBehaviour.Properties.of(Material.METAL)
+                    .sound(SoundType.METAL)
+                    .strength(2f)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel((state) -> state.getValue(CobaltLampBlock.CLICKED) ? 15 : 0))
+            , ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> ARTIFACT_BLOCK = registerBlock("artifact_block", ()-> new ArtifactBlock(
+                    BlockBehaviour.Properties.of(Material.STONE)
+                            .sound(SoundType.STONE)
+                            .strength(2f)
+                            .requiresCorrectToolForDrops()
+                            .lightLevel((state) -> state.getValue(ArtifactBlock.PROGRAMMED) ? 15 : 0))
+            , ModCreativeModeTab.COURSE_TAB);
 
 
 

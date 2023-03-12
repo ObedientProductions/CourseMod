@@ -5,6 +5,19 @@
   "item.mccourse.dowsing_rod": "Dowsing Rod",
   "item.mccourse.coal_bit": "Coal Bit",
   "item.mccourse.turnip": "Turnip",
+  "item.mccourse.cobalt_sword": "Cobalt Sword",
+  "item.mccourse.cobalt_axe": "Cobalt Axe",
+  "item.mccourse.cobalt_pickaxe": "Cobalt Pickaxe",
+  "item.mccourse.cobalt_shovel": "Cobalt Shovel",
+  "item.mccourse.cobalt_hoe": "Cobalt Hoe",
+  "item.mccourse.cobalt_paxel": "Cobalt Paxel",
+  "item.mccourse.cobalt_helmet": "Cobalt Helmet",
+  "item.mccourse.cobalt_chestplate": "Cobalt Chestplate",
+  "item.mccourse.cobalt_leggings": "Cobalt Leggings",
+  "item.mccourse.cobalt_boots": "Cobalt Boots",
+  "item.mccourse.cobalt_horse_armor": "Cobalt Horse Armor",
+  "item.mccourse.data_tablet": "Data Tablet",
+  "item.mccourse.programmer": "Programmer",
 
   "block.mccourse.cobalt_block": "Block Of Cobalt",
   "block.mccourse.cobalt_ore": "Cobalt Ore",
@@ -20,11 +33,15 @@
   "block.mccourse.cobalt_wall": "Cobalt Wall",
   "block.mccourse.cherry_blossom_door": "Cherry Blossom Door",
   "block.mccourse.cherry_blossom_trapdoor": "Cherry Blossom Trapdoor",
+  "block.mccourse.cobalt_lamp": "Cobalt Lamp",
+  "block.mccourse.artifact_block": "Artifact Block",
 
   "itemGroup.coursemodtab": "Course Tab",
 
   "item.mccourse.dowsing_rod.no_valuables" : "No Valuables Found.",
   "tooltip.mccourse.dowsing_rod.tooltip.shift" : "§eRight Click A Block To Find Valuables!",
   "tooltip.mccourse.dowsing_rod.tooltip" : "Hold§e§l SHIFT §rFor More Info",
-  "tooltip.block.speedy_block": "§eIt Gets §lREALLY §r§espeedy!"
+  "tooltip.block.speedy_block": "§eIt Gets §lREALLY §r§espeedy!",
+
+  "enchantment.mccourse.lightning_striker": "Lightning Striker"
 }

@@ -1,8 +1,11 @@
 package net.coderdan.mccourse.item.custom;
 
+import net.coderdan.mccourse.item.ModItems;
+import net.coderdan.mccourse.util.InventoryUtil;
 import net.coderdan.mccourse.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -40,6 +43,11 @@ public class DowsingRodItem extends Item {
                 if(isValuableBlock(blockBelow)){
                     outputValuableCords(posClicked.below(i), player, blockBelow);
                     foundBlock = true;
+
+                    if(InventoryUtil.hasPlayerStackInInventory(player, ModItems.DATA_TABLET.get())){
+                        addNbtToDataTablet(player, posClicked.below(i), blockBelow);
+                    }
+
                     break;
                 }
             }
@@ -56,6 +64,8 @@ public class DowsingRodItem extends Item {
         return super.useOn(pContext);
     }
 
+
+
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents,   TooltipFlag pIsAdvanced) {
         if(Screen.hasShiftDown()){
@@ -69,6 +79,24 @@ public class DowsingRodItem extends Item {
 
 
 
+
+
+
+
+
+
+
+
+    private void addNbtToDataTablet(Player player, BlockPos pos, Block blockBelow) {
+        ItemStack dataTablet =
+                player.getInventory().getItem(InventoryUtil.getFirstInventoryIndex(player, ModItems.DATA_TABLET.get()));
+
+        CompoundTag nbtData = new CompoundTag();
+        nbtData.putString("mccourse.last_ore", "Found " + blockBelow.asItem().getRegistryName().toString() + " at (" +
+                pos.getX() + ", "+ pos.getY() + ", "+ pos.getZ() + ")");
+
+        dataTablet.setTag(nbtData);
+    }
 
 
     private void outputValuableCords(BlockPos blockPos, Player player, Block blockBelow){

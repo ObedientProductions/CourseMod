@@ -1,8 +1,10 @@
 package net.coderdan.mccourse;
 
 import net.coderdan.mccourse.block.ModBlocks;
+import net.coderdan.mccourse.enchantment.ModEnchantments;
 import net.coderdan.mccourse.item.ModItems;
 import net.coderdan.mccourse.util.ModBlockRendering;
+import net.coderdan.mccourse.util.ModItemProperties;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,6 +30,7 @@ public class MCCourseMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEnchantments.register(modEventBus);
 
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::clientSetup);
@@ -46,6 +49,7 @@ public class MCCourseMod
 
     private void clientSetup(final FMLClientSetupEvent event){
         ModBlockRendering.SetRenderLayersOfTransparentBlocks();
+        ModItemProperties.addCustomItemProperties();
     }
 
 }

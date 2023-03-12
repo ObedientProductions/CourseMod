@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "programmed=true": {"model" :  "mccourse:block/artifact_block_on"},
+    "programmed=false": {"model" :  "mccourse:block/artifact_block_off"}
+  }
+}
