@@ -1,9 +1,15 @@
 package net.coderdan.mccourse.item;
 
 import net.coderdan.mccourse.MCCourseMod;
+import net.coderdan.mccourse.block.ModBlocks;
 import net.coderdan.mccourse.item.custom.*;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,12 +32,15 @@ public class ModItems {
     public static final RegistryObject<Item> COAL_BIT = createItem("coal_bit",
             new CoalBitItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
-    public static final RegistryObject<Item> TURNIP = createItem("turnip",
-            new CoalBitItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB).food(ModFoods.Turnip)));
+    public static final RegistryObject<Item> TURNIP = ITEMS.register("turnip",
+            ()-> new ItemNameBlockItem(ModBlocks.TURNIP_CROP.get(),new Item.Properties()
+                    .food(ModFoods.Turnip)
+                    .tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> DOWSING_ROD = ITEMS.register("dowsing_rod",
             ()-> new DowsingRodItem(new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)
                     .durability(16)));
+
 
 
 
@@ -94,6 +103,7 @@ public class ModItems {
             new ProgrammerItem( new Item.Properties()
                     .stacksTo(1)
                     .tab(ModCreativeModeTab.COURSE_TAB)));
+
 
 
 

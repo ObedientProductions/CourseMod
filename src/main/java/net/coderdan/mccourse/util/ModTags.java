@@ -15,6 +15,8 @@ public class ModTags {
         public static final Tags.IOptionalNamedTag<Block> DOWSING_ROD_VALUABLES = tag("dowsing_rod_valuables");
         public static final Tags.IOptionalNamedTag<Block> PAXEL_MINEABLE = tag("mineable/paxel");
 
+        public static final Tags.IOptionalNamedTag<Block> FORGE_ORES = forgeTag("ores");
+
 
         private static Tags.IOptionalNamedTag<Block> tag(String name){
             return BlockTags.createOptional(new ResourceLocation(MCCourseMod.MOD_ID, name));
@@ -29,6 +31,7 @@ public class ModTags {
 
         public static final Tags.IOptionalNamedTag<Item> COBALT_INGOT = forgeTag("ingot/cobalt");
         public static final Tags.IOptionalNamedTag<Item> COBALT_NUGGETS = forgeTag("nuggets/cobalt");
+
 
         private static Tags.IOptionalNamedTag<Item> tag(String name){
             return ItemTags.createOptional(new ResourceLocation(MCCourseMod.MOD_ID, name));

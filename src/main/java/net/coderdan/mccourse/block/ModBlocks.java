@@ -4,10 +4,13 @@ import net.coderdan.mccourse.MCCourseMod;
 import net.coderdan.mccourse.block.custom.ArtifactBlock;
 import net.coderdan.mccourse.block.custom.CobaltLampBlock;
 import net.coderdan.mccourse.block.custom.SpeedyBlock;
+import net.coderdan.mccourse.block.custom.TurnipCropBlock;
 import net.coderdan.mccourse.item.ModCreativeModeTab;
 import net.coderdan.mccourse.item.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
@@ -118,6 +121,22 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()
                             .lightLevel((state) -> state.getValue(ArtifactBlock.PROGRAMMED) ? 15 : 0))
             , ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> TURNIP_CROP = registerBlockWithNoItem("turnip_crop", ()-> new TurnipCropBlock(
+                    BlockBehaviour.Properties.copy(Blocks.BEETROOTS)
+                            .sound(SoundType.CROP)
+                            .strength(0f)
+                            .noOcclusion()
+                            .noCollission())
+            , ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> PINK_ROSE = registerBlock("pink_rose", ()-> new FlowerBlock(
+            MobEffects.CONFUSION, 4,
+            BlockBehaviour.Properties.copy(Blocks.DANDELION)), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> POTTED_PINK_ROSE = BLOCKS.register("potted_pink_rose", ()-> new FlowerPotBlock(
+            null, ModBlocks.PINK_ROSE,
+            BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
 
 
 
