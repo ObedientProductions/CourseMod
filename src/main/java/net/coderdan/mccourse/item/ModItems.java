@@ -64,6 +64,9 @@ public class ModItems {
     public static final RegistryObject<Item> COBALT_PAXEL = createItem("cobalt_paxel",
             new PaxelItem(ModTiers.COBALT,3, 1f,  new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
+    public static final RegistryObject<Item> COBALT_BLOCK_ON_A_STICK = createItem("cobalt_block_on_a_stick",
+            new LevitationSwordItem(ModTiers.COBALT,1, 1f,  new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+
 
 
 

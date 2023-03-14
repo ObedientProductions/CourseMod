@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " b ",
+    " s ",
+    " s "
+  ],
+  "key": {
+    "b": {
+      "item": "mccourse:cobalt_block"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "mccourse:cobalt_block_on_a_stick"
+  }
+}
