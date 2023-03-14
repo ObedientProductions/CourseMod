@@ -3,6 +3,7 @@ package net.coderdan.mccourse.item;
 import net.coderdan.mccourse.MCCourseMod;
 import net.coderdan.mccourse.block.ModBlocks;
 import net.coderdan.mccourse.item.custom.*;
+import net.coderdan.mccourse.sound.ModSounds;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -101,6 +102,11 @@ public class ModItems {
 
     public static final RegistryObject<Item> PROGRAMMER = createItem("programmer",
             new ProgrammerItem( new Item.Properties()
+                    .stacksTo(1)
+                    .tab(ModCreativeModeTab.COURSE_TAB)));
+
+    public static final RegistryObject<Item> BAR_BRAWL_RECORD = createItem("bar_brawl_music_disc",
+            new RecordItem(4, ModSounds.BAR_BRAWL, new Item.Properties()
                     .stacksTo(1)
                     .tab(ModCreativeModeTab.COURSE_TAB)));
 

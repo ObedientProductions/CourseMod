@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model" :  "mccourse:block/rod_stone"},
+    "facing=east": {"model" :  "mccourse:block/rod_stone", "y": 90},
+    "facing=south": {"model" :  "mccourse:block/rod_stone", "y": 180},
+    "facing=west": {"model" :  "mccourse:block/rod_stone", "y": 270}
+  }
+}

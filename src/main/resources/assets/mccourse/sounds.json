@@ -4,5 +4,44 @@
     "sounds": [
       "mccourse:dowsing_rod_found_ore"
     ]
+  },
+  "cobalt_lamp_break": {
+    "subtitle": "sounds.mccourse:cobalt_lamp_break",
+    "sounds": [
+      "mccourse:cobalt_lamp_break"
+    ]
+  },
+  "cobalt_lamp_step": {
+    "subtitle": "sounds.mccourse:cobalt_lamp_step",
+    "sounds": [
+      "mccourse:cobalt_lamp_step"
+    ]
+  },
+  "cobalt_lamp_place": {
+    "subtitle": "sounds.mccourse:cobalt_lamp_place",
+    "sounds": [
+      "mccourse:cobalt_lamp_place"
+    ]
+  },
+  "cobalt_lamp_hit": {
+    "subtitle": "sounds.mccourse:cobalt_lamp_hit",
+    "sounds": [
+      "mccourse:dcobalt_lamp_hit"
+    ]
+  },
+  "cobalt_lamp_fall": {
+    "subtitle": "sounds.mccourse:cobalt_lamp_fall",
+    "sounds": [
+      "mccourse:cobalt_lamp_fall"
+    ]
+  },
+  "bar_brawl": {
+    "subtitle": "sounds.mccourse:bar_brawl",
+    "sounds": [
+      {
+        "name": "mccourse:bar_brawl",
+        "stream": true
+      }
+    ]
   }
 }

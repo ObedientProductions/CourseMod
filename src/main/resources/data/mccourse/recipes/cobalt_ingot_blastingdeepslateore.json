@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "mccourse:deepslate_cobalt_ore"
+    "tag": "forge:ores/cobalt_ore"
   },
   "result": "mccourse:cobalt_ingot",
   "experience": 1,

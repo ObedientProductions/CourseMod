@@ -1,15 +1,14 @@
 package net.coderdan.mccourse.block;
 
 import net.coderdan.mccourse.MCCourseMod;
-import net.coderdan.mccourse.block.custom.ArtifactBlock;
-import net.coderdan.mccourse.block.custom.CobaltLampBlock;
-import net.coderdan.mccourse.block.custom.SpeedyBlock;
-import net.coderdan.mccourse.block.custom.TurnipCropBlock;
+import net.coderdan.mccourse.block.BlockData.VoxelShapes.RodStoneVoxelShapes;
+import net.coderdan.mccourse.block.custom.*;
+import net.coderdan.mccourse.block.custom.general.ModDirectionalBlock;
 import net.coderdan.mccourse.item.ModCreativeModeTab;
 import net.coderdan.mccourse.item.ModItems;
+import net.coderdan.mccourse.sound.ModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
@@ -42,6 +41,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_COBALT_ORE = registerBlock("deepslate_cobalt_ore", ()-> new Block(
             BlockBehaviour.Properties.of(Material.STONE)
                     .strength(4f)
+                    .sound(SoundType.DEEPSLATE)
                     .requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
     public static final RegistryObject<Block> RAW_COBALT_BLOCK = registerBlock("raw_cobalt_ore", ()-> new Block(
@@ -108,7 +108,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> COBALT_LAMP= registerBlock("cobalt_lamp", ()-> new CobaltLampBlock(
             BlockBehaviour.Properties.of(Material.METAL)
-                    .sound(SoundType.METAL)
+                    .sound(ModSounds.COBALT_LAMP_SOUNDS)
                     .strength(2f)
                     .requiresCorrectToolForDrops()
                     .lightLevel((state) -> state.getValue(CobaltLampBlock.CLICKED) ? 15 : 0))
@@ -137,6 +137,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> POTTED_PINK_ROSE = BLOCKS.register("potted_pink_rose", ()-> new FlowerPotBlock(
             null, ModBlocks.PINK_ROSE,
             BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
+
+
+    public static final RegistryObject<Block> ROD_STONE = registerBlock("rod_stone", ()-> new ModDirectionalBlock(
+            RodStoneVoxelShapes.SHAPE_N,
+            RodStoneVoxelShapes.SHAPE_W,
+            RodStoneVoxelShapes.SHAPE_E,
+            RodStoneVoxelShapes.SHAPE_S,
+            BlockBehaviour.Properties.of(Material.METAL)
+                    .noOcclusion()), ModCreativeModeTab.COURSE_TAB);
 
 
 
