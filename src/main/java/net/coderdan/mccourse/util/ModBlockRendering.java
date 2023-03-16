@@ -1,6 +1,7 @@
 package net.coderdan.mccourse.util;
 
 import net.coderdan.mccourse.block.ModBlocks;
+import net.coderdan.mccourse.fluid.ModFluids;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 
@@ -13,5 +14,9 @@ public class ModBlockRendering {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.PINK_ROSE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ROD_STONE.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLUID.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLOWING.get(), RenderType.translucent());
     }
 }

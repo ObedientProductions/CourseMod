@@ -1,6 +1,8 @@
 package net.coderdan.mccourse.block.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
@@ -8,6 +10,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
+
+import java.util.Random;
 
 public class SpeedyBlock extends Block {
     public SpeedyBlock(Properties properties) {
@@ -26,5 +30,11 @@ public class SpeedyBlock extends Block {
         }
 
         super.stepOn(pLevel, pPos, pState, pEntity);
+    }
+
+    @Override
+    public void animateTick(BlockState pState, Level pLevel, BlockPos pPos, Random pRandom) {
+        pLevel.addParticle(ParticleTypes.SMOKE, pPos.getX() + pRandom.nextDouble(), pPos.getY() + 0.5D, pPos.getZ() + pRandom.nextDouble(),
+                0d,0.015d + pRandom.nextDouble(0.075d), 0d);
     }
 }

@@ -3,7 +3,9 @@ package net.coderdan.mccourse.block;
 import net.coderdan.mccourse.MCCourseMod;
 import net.coderdan.mccourse.block.BlockData.VoxelShapes.RodStoneVoxelShapes;
 import net.coderdan.mccourse.block.custom.*;
-import net.coderdan.mccourse.block.custom.general.ModDirectionalBlock;
+import net.coderdan.mccourse.block.custom.RodStoneBlock;
+import net.coderdan.mccourse.block.entity.ModBlockEntities;
+import net.coderdan.mccourse.block.entity.RodStoneBlockEntity;
 import net.coderdan.mccourse.item.ModCreativeModeTab;
 import net.coderdan.mccourse.item.ModItems;
 import net.coderdan.mccourse.sound.ModSounds;
@@ -139,7 +141,7 @@ public class ModBlocks {
             BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION)));
 
 
-    public static final RegistryObject<Block> ROD_STONE = registerBlock("rod_stone", ()-> new ModDirectionalBlock(
+    public static final RegistryObject<Block> ROD_STONE = registerBlock("rod_stone", ()-> new RodStoneBlock(
             RodStoneVoxelShapes.SHAPE_N,
             RodStoneVoxelShapes.SHAPE_W,
             RodStoneVoxelShapes.SHAPE_E,

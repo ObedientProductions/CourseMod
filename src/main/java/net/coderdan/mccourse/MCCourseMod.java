@@ -1,8 +1,11 @@
 package net.coderdan.mccourse;
 
 import net.coderdan.mccourse.block.ModBlocks;
+import net.coderdan.mccourse.block.entity.ModBlockEntities;
 import net.coderdan.mccourse.enchantment.ModEnchantments;
+import net.coderdan.mccourse.fluid.ModFluids;
 import net.coderdan.mccourse.item.ModItems;
+import net.coderdan.mccourse.painting.ModPaintings;
 import net.coderdan.mccourse.sound.ModSounds;
 import net.coderdan.mccourse.util.ModBlockRendering;
 import net.coderdan.mccourse.util.ModItemProperties;
@@ -35,6 +38,9 @@ public class MCCourseMod
         ModItems.register(modEventBus);
         ModEnchantments.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModPaintings.register(modEventBus);
+        ModFluids.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::clientSetup);

@@ -2,6 +2,7 @@ package net.coderdan.mccourse.item;
 
 import net.coderdan.mccourse.MCCourseMod;
 import net.coderdan.mccourse.block.ModBlocks;
+import net.coderdan.mccourse.fluid.ModFluids;
 import net.coderdan.mccourse.item.custom.*;
 import net.coderdan.mccourse.sound.ModSounds;
 import net.minecraft.world.effect.MobEffect;
@@ -67,6 +68,11 @@ public class ModItems {
     public static final RegistryObject<Item> COBALT_BLOCK_ON_A_STICK = createItem("cobalt_block_on_a_stick",
             new LevitationSwordItem(ModTiers.COBALT,1, 1f,  new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
+    public static final RegistryObject<Item> COBALT_BOW = createItem("cobalt_bow",
+            new BowItem(new Item.Properties()
+                    .tab(ModCreativeModeTab.COURSE_TAB)
+                    .durability(500)));
+
 
 
 
@@ -113,6 +119,10 @@ public class ModItems {
                     .stacksTo(1)
                     .tab(ModCreativeModeTab.COURSE_TAB)));
 
+    public static final RegistryObject<Item> HONEY_BUCKET = createItem("honey_bucket",
+            new BucketItem(ModFluids.HONEY_FLUID, new Item.Properties()
+                    .stacksTo(1)
+                    .tab(ModCreativeModeTab.COURSE_TAB)));
 
 
 
